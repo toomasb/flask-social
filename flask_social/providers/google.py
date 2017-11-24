@@ -69,6 +69,7 @@ def get_connection_values(response, **kwargs):
     )
 
     profile = _get_api(credentials).userinfo().get().execute()
+    print(profile)
     return dict(
         provider_id=config['id'],
         provider_user_id=profile['id'],

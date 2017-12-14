@@ -194,7 +194,7 @@ def login_handler(response, provider, query):
                       oauth_response=response)
 
     next = get_url(_security.login_manager.login_view)
-    msg = '%s account email address associated with an existing user. Did you maybe register with email address and password before?' % provider.name
+    msg = 'Your %s account email address is already associated with an existing user. Did you maybe register with this email address and password before?' % provider.name
     do_flash(msg, 'error')
     return redirect(next)
 

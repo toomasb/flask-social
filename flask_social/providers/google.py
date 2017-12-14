@@ -80,6 +80,7 @@ def get_connection_values(response, **kwargs):
         profile_url=profile.get('link'),
         image_url=profile.get('picture'),
         email=profile.get('email'),
+        
     )
 
 def get_token_pair_from_response(response):
